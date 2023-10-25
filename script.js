@@ -35,7 +35,7 @@ const renderData = async () => {
     not_found.classList.remove("show");
     cityName.textContent = data.name;
     country.textContent = data.sys.country;
-    weatherIcon.src = `./assets/${data.weather[0].main}.png`;
+    weatherIcon.src = `./assets/${data.weather[0].main.toLowerCase()}.png`;
     temp.textContent = (data.main.temp - 273.15).toFixed(1);
     humidity.textContent = data.main.humidity + "%";
     wind.textContent = `${data.wind.speed} km/h`;
